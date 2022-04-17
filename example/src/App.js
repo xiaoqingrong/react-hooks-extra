@@ -3,10 +3,10 @@ import React from 'react'
 import { useMyHook } from 'react-hooks-extra'
 
 const App = () => {
-  const example = useMyHook()
+  // const {} = useMyHook()
   return (
     <div>
-      {example}
+      {/* {example} */}
     </div>
   )
 }

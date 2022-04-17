@@ -2,22 +2,19 @@ import * as React from 'react';
 
 export const useMyHook = () => {
   let [{
-    counter
+    loading,
+    txt
   }, setState] = React.useState<{
-    counter: number;
+    loading: boolean,
+    txt: string
   }>({
-    counter: 0
+    loading: false,
+    txt: 'loading'
   });
 
   React.useEffect(() => {
-    let interval = window.setInterval(() => {
-      counter++;
-      setState({counter})
-    }, 1000)
-    return () => {
-      window.clearInterval(interval);
-    };
+    
   }, []);
 
-  return counter;
+  return { loading, txt, setState };
 };
